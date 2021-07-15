@@ -15,11 +15,11 @@ then
 fi
 FORMULA="${NAME}@${VERSION}"
 brew extract --force --version=${VERSION} ${NAME} ${TAP}
-echo "\033[1mFinding ${FORMULA}"
+echo "Finding ${FORMULA}"
 re=`brew search ${NAME} | grep ${FORMULA}`
 if [ ! $re ]; then
-echo "\033[1mI can't find ${FORMULA}"
+echo "I can't find ${FORMULA}"
 else
-echo "\033[1mI find it!!!"
+echo "I find it!!!"
 brew install ${NAME}@${VERSION}
 fi
